@@ -11,4 +11,12 @@ const images = [
   "images/img-10.jpg",
 ];
 
-setInterval(() => {}, 1000);
+let imgIndex = 0;
+setInterval(() => {
+  if (imgIndex >= images.length) {
+    imgIndex = 0;
+  }
+  const imgUrl = images[imgIndex];
+  console.log(imgUrl);
+  imgIndex++;
+}, 1000);
