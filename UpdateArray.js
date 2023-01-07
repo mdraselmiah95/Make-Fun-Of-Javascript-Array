@@ -34,3 +34,15 @@ for (let i = 0; i < response.length; i++) {
 console.log(response);
 
 //* Array is Mutable
+function update(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = `${i + 1}. ${arr[i]}`;
+  }
+  return arr;
+}
+
+const updatedNames = update(names);
+console.log(names);
+
+console.log(updatedNames);
+console.log(names === updatedNames);
