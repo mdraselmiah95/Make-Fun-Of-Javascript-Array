@@ -1,10 +1,14 @@
 //* Array Literal=> []
 
-const arr = [];
+const arr = [
+  "Tom Hanks",
+  "Marilyn Monroe",
+  "Robert De Niro",
+  "Bette Davis",
+  "Natalie Portman",
+  "Gene Hackman",
+  "Heath Ledger",
+  "Katharine Hepburn",
+];
 
-arr[0] = 1;
-arr[1] = 2;
-arr[2] = 3;
-arr[99] = 9;
 console.log(arr);
-console.log(arr.length - 1);
