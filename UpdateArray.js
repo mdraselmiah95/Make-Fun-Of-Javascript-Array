@@ -46,5 +46,3 @@ console.log(names);
 
 console.log(updatedNames);
 console.log(names === updatedNames);
-
-//2.5
