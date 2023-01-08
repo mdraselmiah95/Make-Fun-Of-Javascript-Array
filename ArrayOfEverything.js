@@ -87,6 +87,5 @@ const matrixSum = (matrixA, matrixB) => {
   }
   return result;
 };
-
 const matrixC = matrixSum(matrixA, matrixB);
 console.log(matrixC);
