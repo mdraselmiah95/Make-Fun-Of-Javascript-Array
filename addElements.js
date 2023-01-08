@@ -1,5 +1,6 @@
 /**
  * @Title Add New Element
+ * @Title Update Existing Element
  */
 
 const arrP1 = [1, 2, 3, 4];
@@ -26,4 +27,34 @@ const arrS2 = [6, 7, 8];
 
 arrS1.splice(2, 0, 3);
 arrS1.splice(5, 0, ...arrS2);
-console.log(arrS1);
+// console.log(arrS1);
+
+//* Update Existing Element
+
+const numbers = [1, 2, 7, 4, 5];
+
+//Easy one
+numbers[2] = 3;
+
+console.log(numbers);
+
+// Array of Object
+
+const students = [
+  { id: 1, name: "Rasel" },
+  { id: 2, name: "Rohim" },
+  { id: 3, name: "Kohim" },
+  { id: 4, name: "Shakib" },
+  { id: 5, name: "Shuvo" },
+];
+
+const givenID = 3;
+const updatedName = "Asif";
+
+for (let i = 0; i < students.length; i++) {
+  if (givenID === students[i].id) {
+    students[i].name = updatedName;
+    break;
+  }
+}
+console.log(students);
