@@ -16,7 +16,7 @@ const filePath = path.resolve(__dirname, fileName);
     case ADD: {
       todo.addItem(argv.text);
       console.log("Todo Added");
-      satisfies(todo.todoList, filePath);
+      saveFile(todo.todoList, filePath);
       break;
     }
     case UPDATE: {
