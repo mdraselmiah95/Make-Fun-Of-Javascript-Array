@@ -43,4 +43,4 @@ class Stack {
   }
 }
 
-//ok
+module.exports = Stack;
