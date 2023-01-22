@@ -13,7 +13,10 @@ for (let i = 0; i < text.length; i++) {
 
 let reversedText = "";
 while (!stack.isEmpty()) {
+  console.log(`[POPS]`);
+  console.log(stack);
   reversedText += stack.pop();
 }
 
 console.log(reversedText);
+console.log(stack);
