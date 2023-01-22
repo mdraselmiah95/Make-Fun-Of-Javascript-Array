@@ -13,10 +13,22 @@ for (let i = 0; i < text.length; i++) {
 
 let reversedText = "";
 while (!stack.isEmpty()) {
-  console.log(`[POPS]`);
-  console.log(stack);
+  //   console.log(`[POPS]`);
+  //   console.log(stack);
   reversedText += stack.pop();
 }
 
-console.log(reversedText);
-console.log(stack);
+// console.log(reversedText);
+// console.log(stack);
+
+// JavaScript Array Stack Methods.
+
+const text1 = "HELLO";
+const jsStack = [];
+for (let i = 0; i < text1.length; i++) {
+  jsStack.push(text1.charAt(i));
+}
+
+let result1 = "";
+while (jsStack.length) result1 += jsStack.pop();
+console.log(result1);
