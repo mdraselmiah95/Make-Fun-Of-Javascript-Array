@@ -1,5 +1,5 @@
  Array is a collection.
 
- video=>5.1
+ video=>6.1
 
-This is coolest also
+This is the coolest thing
