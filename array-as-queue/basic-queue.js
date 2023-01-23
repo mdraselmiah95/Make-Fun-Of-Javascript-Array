@@ -42,7 +42,7 @@ class Queue {
   }
 
   next() {
-    if (this.isEmpty) {
+    if (this.isEmpty()) {
       console.log("Queue is Empty 🏬");
       return;
     }
