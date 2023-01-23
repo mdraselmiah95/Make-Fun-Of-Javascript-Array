@@ -50,4 +50,12 @@ function sumFunc(v) {
 
 myForEach(num, sumFunc);
 
-console.log(sum);
+// console.log(sum);
+
+myForEach(names, (value, index) => {
+  //   console.log(`${index + 1}: ${value}`);
+});
+
+names.forEach((value, index) => {
+  console.log(`${index + 1}: ${value}`);
+});
