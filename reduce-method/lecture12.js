@@ -47,17 +47,31 @@ const react = {
   },
 };
 
-const inspectArticle = (course) => {
-  const path = "contents.article.count";
+const inspectObj = (obj, path, returnValue = 0) => {
   return path.split(".").reduce((acc, field) => {
     if (acc) {
       return acc[field];
     }
-    return 0;
-  }, course);
+    return returnValue;
+  }, obj);
 };
 
 const courses = [js, node, react];
 courses.forEach((course) => {
-  console.log(`${course.name} has - Article: ${inspectArticle(course)}`);
+  //   console.log(
+  //     `${course.name} has - Article: ${inspectObj(
+  //       course,
+  //       "contents.article.count"
+  //     )}`
+  //   );
+});
+
+courses.forEach((course) => {
+  const countVideo = inspectObj(course, "contents.video.count");
+  const countArticle = inspectObj(course, "contents.article.count");
+  const countQuiz = inspectObj(course, "contents.quiz.count");
+
+  console.log(
+    `Total Video= ${countVideo}, Article= ${countArticle}, and Quiz= ${countQuiz}`
+  );
 });
