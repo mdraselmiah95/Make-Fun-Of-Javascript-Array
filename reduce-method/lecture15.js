@@ -44,8 +44,20 @@ const courses = [
 const discountedPrice = {
   1: 1500,
   2: 3000,
-  3: 4000,
+  //   3: 4000,
   4: 5000,
   5: 5500,
   6: 1500,
 };
+
+const updatedCourses = courses.reduce((acc, cur) => {
+  if (discountedPrice[cur.id]) {
+    cur.discountedPrice = discountedPrice[cur.id];
+  } else {
+    cur.discountedPrice = 0;
+  }
+  acc.push(cur);
+  return acc;
+}, []);
+
+console.log(updatedCourses);
