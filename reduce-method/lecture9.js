@@ -21,3 +21,8 @@ const resultV = matrix.reduce((acc, cur) => {
 
 console.log(resultV);
 //* flat Sum
+const flatSum = matrix.reduce((acc, cur) => {
+  return acc + cur.reduce((a, b) => a + b);
+}, 0);
+
+console.log(flatSum);
