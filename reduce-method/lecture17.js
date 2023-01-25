@@ -2,7 +2,7 @@
  * @title :Contact List By Group
  */
 
-[
+const Contacts = [
   {
     id: 1,
     name: "Avictor",
@@ -604,3 +604,34 @@
     phone: "+62-557-959-5935",
   },
 ];
+
+Contacts.sort((a, b) => {
+  if (a.name > b.name) return 1;
+  if (a.name < b.name) return -1;
+  return 0;
+});
+
+const group = Contacts.reduce((acc, cur) => {
+  let groupName = cur.name.charAt(0).toUpperCase();
+  if (acc[groupName]) {
+    acc[groupName].push(cur);
+  } else {
+    acc[groupName] = [cur];
+  }
+  return acc;
+}, {});
+
+const displayList = (group) => {
+  console.log("Displaying Contact Information");
+  console.log("============+++++===========");
+
+  const keys = Object.keys(group);
+  keys.forEach((key) => {
+    console.log(`Group: ${key}`);
+    console.log(group[key]);
+  });
+};
+
+displayList(group);
+
+// console.log(Contacts);
