@@ -42,4 +42,25 @@ range(0, 4, 1); // [0,1,2,3,4]
 
 range(1, 10, 2); // [0,1,,3,5,7,9]
 
-// 8:12
+range("A".charCodeAt(0), "Z".charCodeAt(), 1).map((x) =>
+  String.fromCharCode(x)
+);
+
+Array.isArray([]);
+Array.isArray([1]);
+Array.isArray(new Array());
+Array.isArray(new Array("a", "b", "C", "d"));
+Array.isArray(new Array(3));
+
+Array.isArray(Array.prototype);
+
+Array.isArray();
+Array.isArray({});
+Array.isArray(null);
+Array.isArray(undefined);
+Array.isArray(17);
+Array.isArray("Array");
+Array.isArray(true);
+Array.isArray(false);
+Array.isArray(new Uint8Array(32));
+Array.isArray({ __proto__: Array.prototype });
