@@ -17,3 +17,27 @@ const actress = [
   { id: 8, name: "Anne Hathaway" },
   { id: 10, name: "Anne Hathaway" },
 ];
+
+const linearSearch = (arr, key) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === key) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+const S1 = linearSearch(arr, 90);
+console.log(S1);
+
+const linearSearchCB = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (cb(arr[i])) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+const s3 = linearSearchCB(actress, (item) => item.name === "Elizabeth Olsen");
+console.log(s3);
