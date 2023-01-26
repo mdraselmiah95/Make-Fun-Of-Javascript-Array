@@ -10,6 +10,11 @@ const todos = [
   { id: "232", task: "Sleep", time: "Night" },
 ];
 
+const todo = todos.find((item) => item.time.toLowerCase() === "evening");
+todo.task = "Debugging 😲";
+console.log(todos);
+console.log(todo);
+
 const result = [
   { name: "Rasel", score: 99 },
   { name: "Robin", score: 91 },
@@ -17,3 +22,20 @@ const result = [
   { name: "Mehedi", score: 79 },
   { name: "Shakib", score: 93 },
 ];
+
+const highest = 99;
+const student = result.find((item) => item.score === highest);
+console.log(student);
+
+const ourFind = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (cb(arr[i])) {
+      return arr[i];
+    }
+  }
+  return undefined;
+};
+
+const lowest = 79;
+const student1 = ourFind(result, (item) => item.score === lowest);
+console.log(student1);
