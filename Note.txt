@@ -1,4 +1,3 @@
  Array is a collection.
 
- video=>11.3
 
