@@ -24,3 +24,5 @@ console.log(obj instanceof Array);
 console.log(Array.isArray(arr));
 console.log(Object.prototype.toString.call(arr) === "[object Array]");
 console.log(Object.prototype.toString.call(arr));
+
+// You are the coolest the you gone ==>>>>  Two are
