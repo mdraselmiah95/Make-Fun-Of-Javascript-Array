@@ -21,3 +21,5 @@ const arr = [3, 5, 6, 8];
 for (let v of arr) {
   console.log(v);
 }
+
+loop(arr, "ARRAY");
