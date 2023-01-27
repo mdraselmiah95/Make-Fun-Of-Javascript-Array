@@ -16,3 +16,8 @@ const loop = (it, name) => {
 loop(keys, "KEY");
 loop(values, "VALUE");
 loop(entries, "ENTRY");
+
+const arr = [3, 5, 6, 8];
+for (let v of arr) {
+  console.log(v);
+}
