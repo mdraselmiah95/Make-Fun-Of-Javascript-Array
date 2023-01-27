@@ -84,3 +84,6 @@ Array(7); // array of 7 empty slots
 
 Array.of(1, 2, 3); // [1, 2, 3]
 Array(1, 2, 3); // [1, 2, 3]
+
+const newArr = [12, 5, 4, 7, 8, 9, 12, 56, 78, 99, 867, 312, 3, 4, 6, 78, 98];
+newArr.forEach((n) => console.log(n));
